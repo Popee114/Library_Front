@@ -1,0 +1,14 @@
+.workspace {
+    background-color: rgb(129, 6, 195);
+    padding: 30px 50px;
+}
+
+.customTable {
+    overflow-y: scroll;
+
+    height: 100%;
+}
+
+.customTable::-webkit-scrollbar {
+    width: 0;
+}

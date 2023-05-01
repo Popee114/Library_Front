@@ -1,0 +1,10 @@
+.customCell {
+    border-color: rgb(228, 38, 143);
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+
+    font-size: 1.5vh;
+
+    color: aqua;
+}

@@ -1,0 +1,21 @@
+.navBar {
+  background-color: rgb(104, 4, 158);
+
+  border-bottom-style: inset;
+  border-color: rgb(51, 2, 78);
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+
+  font-size: 3vh;
+  font-style: italic;
+
+  text-align: center;
+
+  color: aqua;
+}
+
+.customRow {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}

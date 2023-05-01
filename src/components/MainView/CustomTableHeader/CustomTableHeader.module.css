@@ -1,0 +1,8 @@
+.customCell {
+  border-color: rgb(255, 0, 195);
+  border-style: solid;
+
+  font-size: 2vh;
+
+  color: rgb(1, 229, 229);
+}

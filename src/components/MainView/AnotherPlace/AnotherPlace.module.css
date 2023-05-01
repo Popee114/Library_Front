@@ -1,0 +1,40 @@
+.textArea {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 35% 65%;
+}
+
+.textArea div {
+    padding: 7%;
+}
+
+.textArea p {
+    padding: 0;
+    margin: 10px 5px;
+
+    width: max-content;
+}
+
+.textArea input {
+    width: 65%;
+}
+
+.addButton {
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(251, 255, 0);
+
+    background-color: rgb(30, 255, 0);
+
+    text-align: center;
+
+    width: 50%;
+
+    margin: 5px auto;
+}
+
+.addButton:hover {
+    border-color: rgb(30, 255, 0);
+
+    background-color: rgb(251, 255, 0);
+}

@@ -1,0 +1,24 @@
+.notFound {
+    display: grid;
+
+    grid-template-columns: auto 50vh auto;
+    grid-template-rows: repeat(3, 33vh);
+}
+
+.someBlock {
+    padding: 10px;
+
+    text-align: center;
+
+    font-size: 8vh;
+    padding: 0px;
+}
+
+.someBlock p {
+    margin: 0px;
+}
+
+.someBlock a {
+    color: aqua;
+    text-decoration: none;
+}
