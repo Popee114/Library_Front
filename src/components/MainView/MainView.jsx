@@ -1,17 +1,23 @@
 import React from 'react'
-import RenderAnotherPlace from './AnotherPlace/AnotherPlace';
-import NavBar from './NavBar/NavBar';
-import Workspace from './Workspace/Workspace';
+import { AnotherPlace } from './AnotherPlace/AnotherPlace';
+import { NavBar } from './NavBar/NavBar';
+import { Workspace } from './Workspace/Workspace';
 import MainViewCss from './MainView.module.css';
 
-const MainView = (props) => {
+class MainView extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  render() {
     return (
-        <div className={MainViewCss.mainView}>
-          <NavBar />
-          <RenderAnotherPlace dictionary={props.dictionary} />
-          <Workspace dictionary={props.dictionary} />
-        </div>
+      <div className={MainViewCss.mainView}>
+        <NavBar />
+        <AnotherPlace dictionary={this.props.dictionary} />
+        <Workspace dictionary={this.props.dictionary} />
+      </div>
     );
+  }
 }
 
-export default MainView;
+export { MainView };

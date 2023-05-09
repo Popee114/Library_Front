@@ -1,11 +1,13 @@
 import React from 'react'
 
-const NavBar = () => {
-  return (
-    <div className='navBar'>
-      My dictionary
-    </div>
-  );
+class NavBar extends React.Component {
+  render() {
+    return (
+      <div className='navBar'>
+        My dictionary
+      </div>
+    );
+  }
 }
 
-export default NavBar;
+export { NavBar };

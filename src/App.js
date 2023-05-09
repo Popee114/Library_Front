@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
-import MainView from './components/MainView/MainView';
-import NotFoundPage from "./components/NotFoundView/NotFoundPage";
+import { MainView } from './components/MainView/MainView';
+import { NotFoundPage } from "./components/NotFoundView/NotFoundPage";
 
 const dictionary = [
   {
@@ -75,15 +75,17 @@ const dictionary = [
   }
 ];
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/words" element={<MainView dictionary={dictionary} />} />
-        <Route path="*" element={<NotFoundPage />}/>
-      </Routes>
-    </BrowserRouter>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/words" element={<MainView dictionary={dictionary} />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
+    );
+  }
 }
 
-export default App;
+export { App };

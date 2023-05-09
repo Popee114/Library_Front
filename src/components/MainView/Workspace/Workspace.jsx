@@ -1,23 +1,19 @@
 import React from "react";
-import RenderHeader from "../CustomTableHeader/CustomTableHeader";
-import RenderRows from "../CustomTableRow/CustomTableRow";
+import { CustomTableHeader } from "../CustomTableHeader/CustomTableHeader";
+import { CustomRows } from "../CustomTableRow/CustomTableRow";
 import WorkspaceCss from "./Workspace.module.css"
 
-const Workspace = (props) => {
-    return (
-        <div className={WorkspaceCss.workspace}>
-            <CustomTable dictionary={props.dictionary}/>
-        </div>
-    );
+class Workspace extends React.Component {
+    render() {
+        return (
+            <div className={WorkspaceCss.workspace}>
+                <div className={WorkspaceCss.customTable}>
+                    <CustomTableHeader />
+                    <CustomRows dictionary={this.props.dictionary} />
+                </div>
+            </div>
+        );
+    }
 }
 
-const CustomTable = (props) => {
-    return (
-        <div className={WorkspaceCss.customTable}>
-            <RenderHeader />
-            <RenderRows dictionary={props.dictionary}/>
-        </div>
-    );
-}
-
-export default Workspace;
+export { Workspace };

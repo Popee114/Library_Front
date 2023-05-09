@@ -1,33 +1,35 @@
 import React from "react";
-import AnotherPlace from "./AnotherPlace.module.css";
+import AnotherPlaceCss from "./AnotherPlace.module.css";
 
-const RenderAnotherPlace = (props) => {
-  return (
-    <div>
-      <div className={AnotherPlace.textArea}>
-        <div><p>Ru - </p></div>
-        <div><input id="ru" type="text" /></div>
-        <div><p>En - </p></div>
-        <div><input id="en" type="text" /></div>
-      </div>      
-      <div onClick={() => AddWord(props.dictionary)} className={AnotherPlace.addButton}>Add</div>
-    </div>
-  );
-}
+class AnotherPlace extends React.Component {
+  addWord(dictionary) {
+    let ruValue = document.getElementById('ru').value;
+    let enValue = document.getElementById('en').value;
 
-function AddWord(dictionary) {
-  let ruValue = document.getElementById('ru').value;
-  let enValue = document.getElementById('en').value;
+    if (enValue.length > 1 && ruValue.length > 1) {
+      dictionary.push(
+        {
+          word: enValue,
+          translation: ruValue
+        }
+      );
 
-  if (enValue.length > 1 && ruValue.length > 1){
-    dictionary.push(
-      {
-        word: enValue,
-        translation: ruValue
-      }
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div className={AnotherPlaceCss.textArea}>
+          <div><p>Ru - </p></div>
+          <div><input id="ru" type="text" /></div>
+          <div><p>En - </p></div>
+          <div><input id="en" type="text" /></div>
+        </div>
+        <div onClick={() => this.addWord(this.props.dictionary)} className={AnotherPlaceCss.addButton}>Add</div>
+      </div>
     );
-    
   }
 }
 
-export default RenderAnotherPlace;
+export { AnotherPlace };
