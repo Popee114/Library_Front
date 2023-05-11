@@ -81,11 +81,15 @@ class MainView extends React.Component {
     this.state = { dictionary: dictionary };
   }
 
+  refresh(){
+      this.setState(this.state);
+  }
+
   render() {
     return (
       <div className={MainViewCss.mainView}>
         <NavBar />
-        <AnotherPlace dictionary={this.state.dictionary} />
+        <AnotherPlace dictionary={this.state.dictionary} refresh={() => this.refresh()}/>
         <Workspace dictionary={this.state.dictionary} />
       </div>
     );
